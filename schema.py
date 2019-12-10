@@ -13,13 +13,15 @@ class Providers(ObjectType):
     zip = String()
 
 class Query(ObjectType):
-    reviews = List(Review)
-    providers = List(Providers)
+    providers = List(Providers, uid=Int(required=False))
     hello = String(description="Hello")
 
     def resolve_providers(self, info, **args):
-        print(providers)
-        # return json.dumps(providers)
+        if 'uid' in args:
+            # User is asking for just one facility
+            return list(filter(lambda x: x['uid'] == args['uid'], providers))
+
+        # Facility not specified return all
         return providers
 
     def resolve_hello(self, info, **args):
