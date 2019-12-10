@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from resource import providers
 from schema import Query
 from flask_graphql import GraphQLView
@@ -12,6 +13,7 @@ view_func = GraphQLView.as_view(
 
 app = Flask(__name__)
 app.add_url_rule('/graphql', view_func=view_func)
+CORS(app)
 
 @app.route('/providers')
 def providers_list():
