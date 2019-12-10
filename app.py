@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from resource import providers
+from resource import providers, provider_products, provider_users, users_log
 from schema import Query
 from flask_graphql import GraphQLView
 from graphene import Schema
@@ -20,13 +20,20 @@ def providers_list():
     return json.dumps(providers)
 
 @app.route('/provider/<int:uid>')
-def provider(uid):
+def provider_info(uid):
     return json.dumps(list(filter(lambda x: x['uid'] == uid, providers)))
 
 @app.route('/provider/<int:uid>/products')
-def provider_products(uid):
-    return 'products'
-    #  return json.dumps(list(filter(lambda x: x['uid'] == uid, providers)))
+def provider_products_list(uid):
+    return json.dumps(list(filter(lambda x: x['provider_uid'] == uid, provider_products)))
+
+@app.route('/provider/<int:uid>/users')
+def provider_users_list(uid):
+    return json.dumps(list(filter(lambda x: x['provider_uid'] == uid, provider_users)))
+
+@app.route('/users/<int:uid>/logging')
+def provider_users_history_list(uid):
+    return json.dumps(list(filter(lambda x: x['user_uid'] == uid, users_log)))
 
 #test
 if __name__ == '__main__':

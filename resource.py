@@ -1,5 +1,762 @@
+# Provider Data {{{
 providers = [
     {'uid':1,'provider_name':'Receptopharm Inc.','mds_fac_id':'LWHE8N','npi':'5230597942','street_address':'13 Ridge Oak Court','city':'Toledo','state':'Ohio','zip':'43610'},
     {'uid':2,'provider_name':'Orange Nursing','mds_fac_id':'A5325','npi':'56829573762','street_address':'1783 Washington St','city':'Dallas','state':'Texas','zip':'75207'},
     {'uid':3,'provider_name':'Motor Homes','mds_fac_id':'KJS5332','npi':'847562847','street_address':'1200 Freedom Dr.','city':'Saginaw','state':'Michigan','zip':'48623'}
 ]
+# }}}
+
+# Product Data {{{
+provider_products = [{
+  "uid": 1,
+  "provider_uid": 1,
+  "product_name": "Alpha",
+  "start_of_service": "7/7/2019",
+  "end_of_service": "10/17/2019",
+  "added_on": "9/7/2019"
+}, {
+  "uid": 2,
+  "provider_uid": 1,
+  "product_name": "Aerified",
+  "start_of_service": "8/20/2019",
+  "end_of_service": "3/27/2019",
+  "added_on": "2/2/2019"
+}, {
+  "uid": 3,
+  "provider_uid": 2,
+  "product_name": "Matsoft",
+  "start_of_service": "12/17/2018",
+  "end_of_service": "8/22/2019",
+  "added_on": "2/21/2019"
+}, {
+  "uid": 4,
+  "provider_uid": 2,
+  "product_name": "Toughjoyfax",
+  "start_of_service": "7/28/2019",
+  "end_of_service": "11/20/2019",
+  "added_on": "6/19/2019"
+}, {
+  "uid": 5,
+  "provider_uid": 2,
+  "product_name": "Ventosanzap",
+  "start_of_service": "8/27/2019",
+  "end_of_service": "9/1/2019",
+  "added_on": "5/1/2019"
+}, {
+  "uid": 6,
+  "provider_uid": 3,
+  "product_name": "Bamity",
+  "start_of_service": "10/26/2019",
+  "end_of_service": "12/2/2019",
+  "added_on": "6/28/2019"
+}, {
+  "uid": 7,
+  "provider_uid": 3,
+  "product_name": "Ventosanzap",
+  "start_of_service": "5/18/2019",
+  "end_of_service": "7/16/2019",
+  "added_on": "1/13/2019"
+}, {
+  "uid": 8,
+  "provider_uid": 3,
+  "product_name": "Mat Lam Tam",
+  "start_of_service": "4/23/2019",
+  "end_of_service": "3/28/2019",
+  "added_on": "1/10/2019"
+}, {
+  "uid": 9,
+  "provider_uid": 3,
+  "product_name": "Job",
+  "start_of_service": "1/1/2019",
+  "end_of_service": "1/12/2019",
+  "added_on": "1/16/2019"
+}]
+# }}}
+
+# {{{ Provider Users
+provider_users = [{
+  "uid": 1,
+  "provider_uid": 1,
+  "username": "smeiklam0",
+  "first_name": "Sunny",
+  "last_name": "Meiklam",
+  "email": "smeiklam0@soundcloud.com",
+  "last_login": "10/26/2019"
+}, {
+  "uid": 2,
+  "provider_uid": 2,
+  "username": "wfinker1",
+  "first_name": "Webster",
+  "last_name": "Finker",
+  "email": "wfinker1@ameblo.jp",
+  "last_login": "11/14/2019"
+}, {
+  "uid": 3,
+  "provider_uid": 3,
+  "username": "aunwin2",
+  "first_name": "Ario",
+  "last_name": "Unwin",
+  "email": "aunwin2@edublogs.org",
+  "last_login": "6/22/2019"
+}, {
+  "uid": 4,
+  "provider_uid": 1,
+  "username": "jfoxhall3",
+  "first_name": "Jacob",
+  "last_name": "Foxhall",
+  "email": "jfoxhall3@shop-pro.jp",
+  "last_login": "6/10/2019"
+}, {
+  "uid": 5,
+  "provider_uid": 2,
+  "username": "pboutton4",
+  "first_name": "Pearline",
+  "last_name": "Boutton",
+  "email": "pboutton4@sphinn.com",
+  "last_login": "10/6/2019"
+}, {
+  "uid": 6,
+  "provider_uid": 3,
+  "username": "hsteffens5",
+  "first_name": "Ham",
+  "last_name": "Steffens",
+  "email": "hsteffens5@multiply.com",
+  "last_login": "10/23/2019"
+}, {
+  "uid": 7,
+  "provider_uid": 1,
+  "username": "aonoulane6",
+  "first_name": "Aloysius",
+  "last_name": "O'Noulane",
+  "email": "aonoulane6@stumbleupon.com",
+  "last_login": "2/2/2019"
+}, {
+  "uid": 8,
+  "provider_uid": 2,
+  "username": "ksnoddon7",
+  "first_name": "Keelby",
+  "last_name": "Snoddon",
+  "email": "ksnoddon7@ehow.com",
+  "last_login": "2/24/2019"
+}, {
+  "uid": 9,
+  "provider_uid": 3,
+  "username": "ntandy8",
+  "first_name": "Ninnetta",
+  "last_name": "Tandy",
+  "email": "ntandy8@qq.com",
+  "last_login": "10/15/2019"
+}, {
+  "uid": 10,
+  "provider_uid": 1,
+  "username": "bcordeiro9",
+  "first_name": "Brina",
+  "last_name": "Cordeiro",
+  "email": "bcordeiro9@stumbleupon.com",
+  "last_login": "10/8/2019"
+}, {
+  "uid": 11,
+  "provider_uid": 2,
+  "username": "fnealanda",
+  "first_name": "Flem",
+  "last_name": "Nealand",
+  "email": "fnealanda@va.gov",
+  "last_login": "4/28/2019"
+}, {
+  "uid": 12,
+  "provider_uid": 3,
+  "username": "fmacpharlainb",
+  "first_name": "Faina",
+  "last_name": "MacPharlain",
+  "email": "fmacpharlainb@istockphoto.com",
+  "last_login": "12/9/2019"
+}, {
+  "uid": 13,
+  "provider_uid": 1,
+  "username": "llamartinec",
+  "first_name": "Llywellyn",
+  "last_name": "Lamartine",
+  "email": "llamartinec@howstuffworks.com",
+  "last_login": "9/12/2019"
+}, {
+  "uid": 14,
+  "provider_uid": 2,
+  "username": "nphilippaultd",
+  "first_name": "Noelle",
+  "last_name": "Philippault",
+  "email": "nphilippaultd@about.me",
+  "last_login": "7/23/2019"
+}, {
+  "uid": 15,
+  "provider_uid": 3,
+  "username": "sfranzettie",
+  "first_name": "Scottie",
+  "last_name": "Franzetti",
+  "email": "sfranzettie@omniture.com",
+  "last_login": "11/8/2019"
+}, {
+  "uid": 16,
+  "provider_uid": 1,
+  "username": "ddevonportf",
+  "first_name": "Damara",
+  "last_name": "Devonport",
+  "email": "ddevonportf@cafepress.com",
+  "last_login": "12/23/2018"
+}, {
+  "uid": 17,
+  "provider_uid": 2,
+  "username": "rseedhouseg",
+  "first_name": "Randolph",
+  "last_name": "Seedhouse",
+  "email": "rseedhouseg@icq.com",
+  "last_login": "6/3/2019"
+}, {
+  "uid": 18,
+  "provider_uid": 3,
+  "username": "jweekesh",
+  "first_name": "Jermaine",
+  "last_name": "Weekes",
+  "email": "jweekesh@house.gov",
+  "last_login": "12/13/2018"
+}, {
+  "uid": 19,
+  "provider_uid": 1,
+  "username": "cgreydoni",
+  "first_name": "Cristine",
+  "last_name": "Greydon",
+  "email": "cgreydoni@tumblr.com",
+  "last_login": "12/30/2018"
+}, {
+  "uid": 20,
+  "provider_uid": 2,
+  "username": "kkensallj",
+  "first_name": "Karoline",
+  "last_name": "Kensall",
+  "email": "kkensallj@mozilla.com",
+  "last_login": "3/27/2019"
+}, {
+  "uid": 21,
+  "provider_uid": 3,
+  "username": "aroosek",
+  "first_name": "Ali",
+  "last_name": "Roose",
+  "email": "aroosek@accuweather.com",
+  "last_login": "3/15/2019"
+}, {
+  "uid": 22,
+  "provider_uid": 1,
+  "username": "cgaskinl",
+  "first_name": "Courtnay",
+  "last_name": "Gaskin",
+  "email": "cgaskinl@springer.com",
+  "last_login": "8/31/2019"
+}, {
+  "uid": 23,
+  "provider_uid": 2,
+  "username": "flehenmannm",
+  "first_name": "Fleming",
+  "last_name": "Lehenmann",
+  "email": "flehenmannm@plala.or.jp",
+  "last_login": "10/7/2019"
+}, {
+  "uid": 24,
+  "provider_uid": 3,
+  "username": "hfilippovn",
+  "first_name": "Herschel",
+  "last_name": "Filippov",
+  "email": "hfilippovn@uiuc.edu",
+  "last_login": "9/25/2019"
+}, {
+  "uid": 25,
+  "provider_uid": 1,
+  "username": "kcratchleyo",
+  "first_name": "Kameko",
+  "last_name": "Cratchley",
+  "email": "kcratchleyo@rambler.ru",
+  "last_login": "4/27/2019"
+}, {
+  "uid": 26,
+  "provider_uid": 2,
+  "username": "escamblerp",
+  "first_name": "Emelia",
+  "last_name": "Scambler",
+  "email": "escamblerp@ocn.ne.jp",
+  "last_login": "1/29/2019"
+}, {
+  "uid": 27,
+  "provider_uid": 3,
+  "username": "tkeileyq",
+  "first_name": "Terrill",
+  "last_name": "Keiley",
+  "email": "tkeileyq@foxnews.com",
+  "last_login": "3/28/2019"
+}, {
+  "uid": 28,
+  "provider_uid": 1,
+  "username": "mfosseyr",
+  "first_name": "Malvin",
+  "last_name": "Fossey",
+  "email": "mfosseyr@github.com",
+  "last_login": "8/26/2019"
+}, {
+  "uid": 29,
+  "provider_uid": 2,
+  "username": "esaffrans",
+  "first_name": "Eloisa",
+  "last_name": "Saffran",
+  "email": "esaffrans@i2i.jp",
+  "last_login": "9/26/2019"
+}, {
+  "uid": 30,
+  "provider_uid": 3,
+  "username": "psellnert",
+  "first_name": "Petronia",
+  "last_name": "Sellner",
+  "email": "psellnert@jiathis.com",
+  "last_login": "6/17/2019"
+}, {
+  "uid": 31,
+  "provider_uid": 1,
+  "username": "kcazaletu",
+  "first_name": "Katrina",
+  "last_name": "Cazalet",
+  "email": "kcazaletu@kickstarter.com",
+  "last_login": "10/9/2019"
+}, {
+  "uid": 32,
+  "provider_uid": 2,
+  "username": "mbetunv",
+  "first_name": "Muhammad",
+  "last_name": "Betun",
+  "email": "mbetunv@irs.gov",
+  "last_login": "4/14/2019"
+}, {
+  "uid": 33,
+  "provider_uid": 3,
+  "username": "phurllw",
+  "first_name": "Pennie",
+  "last_name": "Hurll",
+  "email": "phurllw@mac.com",
+  "last_login": "4/19/2019"
+}, {
+  "uid": 34,
+  "provider_uid": 1,
+  "username": "cdenmeadx",
+  "first_name": "Clark",
+  "last_name": "Denmead",
+  "email": "cdenmeadx@flickr.com",
+  "last_login": "5/16/2019"
+}, {
+  "uid": 35,
+  "provider_uid": 2,
+  "username": "gdythamy",
+  "first_name": "Georgie",
+  "last_name": "Dytham",
+  "email": "gdythamy@chron.com",
+  "last_login": "3/10/2019"
+}]
+# }}}
+
+# {{{ Users Logging
+users_log = [{
+  "uid": 1,
+  "user_uid": 1,
+  "login_time": "1/29/2019"
+}, {
+  "uid": 2,
+  "user_uid": 2,
+  "login_time": "2/2/2019"
+}, {
+  "uid": 3,
+  "user_uid": 3,
+  "login_time": "12/13/2018"
+}, {
+  "uid": 4,
+  "user_uid": 4,
+  "login_time": "2/17/2019"
+}, {
+  "uid": 5,
+  "user_uid": 5,
+  "login_time": "10/30/2019"
+}, {
+  "uid": 6,
+  "user_uid": 6,
+  "login_time": "12/10/2018"
+}, {
+  "uid": 7,
+  "user_uid": 7,
+  "login_time": "8/5/2019"
+}, {
+  "uid": 8,
+  "user_uid": 8,
+  "login_time": "6/30/2019"
+}, {
+  "uid": 9,
+  "user_uid": 9,
+  "login_time": "3/30/2019"
+}, {
+  "uid": 10,
+  "user_uid": 10,
+  "login_time": "4/4/2019"
+}, {
+  "uid": 11,
+  "user_uid": 11,
+  "login_time": "10/23/2019"
+}, {
+  "uid": 12,
+  "user_uid": 12,
+  "login_time": "12/17/2018"
+}, {
+  "uid": 13,
+  "user_uid": 13,
+  "login_time": "2/17/2019"
+}, {
+  "uid": 14,
+  "user_uid": 14,
+  "login_time": "9/20/2019"
+}, {
+  "uid": 15,
+  "user_uid": 15,
+  "login_time": "2/22/2019"
+}, {
+  "uid": 16,
+  "user_uid": 16,
+  "login_time": "12/31/2018"
+}, {
+  "uid": 17,
+  "user_uid": 17,
+  "login_time": "8/8/2019"
+}, {
+  "uid": 18,
+  "user_uid": 18,
+  "login_time": "12/27/2018"
+}, {
+  "uid": 19,
+  "user_uid": 19,
+  "login_time": "12/15/2018"
+}, {
+  "uid": 20,
+  "user_uid": 20,
+  "login_time": "7/14/2019"
+}, {
+  "uid": 21,
+  "user_uid": 21,
+  "login_time": "4/11/2019"
+}, {
+  "uid": 22,
+  "user_uid": 22,
+  "login_time": "11/4/2019"
+}, {
+  "uid": 23,
+  "user_uid": 23,
+  "login_time": "4/17/2019"
+}, {
+  "uid": 24,
+  "user_uid": 24,
+  "login_time": "6/2/2019"
+}, {
+  "uid": 25,
+  "user_uid": 25,
+  "login_time": "12/19/2018"
+}, {
+  "uid": 26,
+  "user_uid": 26,
+  "login_time": "5/23/2019"
+}, {
+  "uid": 27,
+  "user_uid": 27,
+  "login_time": "10/21/2019"
+}, {
+  "uid": 28,
+  "user_uid": 28,
+  "login_time": "12/14/2018"
+}, {
+  "uid": 29,
+  "user_uid": 29,
+  "login_time": "1/6/2019"
+}, {
+  "uid": 30,
+  "user_uid": 30,
+  "login_time": "2/26/2019"
+}, {
+  "uid": 31,
+  "user_uid": 31,
+  "login_time": "4/4/2019"
+}, {
+  "uid": 32,
+  "user_uid": 32,
+  "login_time": "2/20/2019"
+}, {
+  "uid": 33,
+  "user_uid": 33,
+  "login_time": "3/11/2019"
+}, {
+  "uid": 34,
+  "user_uid": 34,
+  "login_time": "9/9/2019"
+}, {
+  "uid": 35,
+  "user_uid": 35,
+  "login_time": "8/28/2019"
+}, {
+  "uid": 36,
+  "user_uid": 1,
+  "login_time": "6/14/2019"
+}, {
+  "uid": 37,
+  "user_uid": 2,
+  "login_time": "12/16/2018"
+}, {
+  "uid": 38,
+  "user_uid": 3,
+  "login_time": "9/27/2019"
+}, {
+  "uid": 39,
+  "user_uid": 4,
+  "login_time": "7/7/2019"
+}, {
+  "uid": 40,
+  "user_uid": 5,
+  "login_time": "7/29/2019"
+}, {
+  "uid": 41,
+  "user_uid": 6,
+  "login_time": "9/5/2019"
+}, {
+  "uid": 42,
+  "user_uid": 7,
+  "login_time": "11/26/2019"
+}, {
+  "uid": 43,
+  "user_uid": 8,
+  "login_time": "8/21/2019"
+}, {
+  "uid": 44,
+  "user_uid": 9,
+  "login_time": "4/13/2019"
+}, {
+  "uid": 45,
+  "user_uid": 10,
+  "login_time": "12/24/2018"
+}, {
+  "uid": 46,
+  "user_uid": 11,
+  "login_time": "9/20/2019"
+}, {
+  "uid": 47,
+  "user_uid": 12,
+  "login_time": "9/6/2019"
+}, {
+  "uid": 48,
+  "user_uid": 13,
+  "login_time": "8/1/2019"
+}, {
+  "uid": 49,
+  "user_uid": 14,
+  "login_time": "12/2/2019"
+}, {
+  "uid": 50,
+  "user_uid": 15,
+  "login_time": "4/16/2019"
+}, {
+  "uid": 51,
+  "user_uid": 16,
+  "login_time": "7/23/2019"
+}, {
+  "uid": 52,
+  "user_uid": 17,
+  "login_time": "12/2/2019"
+}, {
+  "uid": 53,
+  "user_uid": 18,
+  "login_time": "3/6/2019"
+}, {
+  "uid": 54,
+  "user_uid": 19,
+  "login_time": "12/2/2019"
+}, {
+  "uid": 55,
+  "user_uid": 20,
+  "login_time": "4/2/2019"
+}, {
+  "uid": 56,
+  "user_uid": 21,
+  "login_time": "4/1/2019"
+}, {
+  "uid": 57,
+  "user_uid": 22,
+  "login_time": "7/8/2019"
+}, {
+  "uid": 58,
+  "user_uid": 23,
+  "login_time": "3/10/2019"
+}, {
+  "uid": 59,
+  "user_uid": 24,
+  "login_time": "11/6/2019"
+}, {
+  "uid": 60,
+  "user_uid": 25,
+  "login_time": "6/14/2019"
+}, {
+  "uid": 61,
+  "user_uid": 26,
+  "login_time": "8/16/2019"
+}, {
+  "uid": 62,
+  "user_uid": 27,
+  "login_time": "11/21/2019"
+}, {
+  "uid": 63,
+  "user_uid": 28,
+  "login_time": "2/21/2019"
+}, {
+  "uid": 64,
+  "user_uid": 29,
+  "login_time": "7/18/2019"
+}, {
+  "uid": 65,
+  "user_uid": 30,
+  "login_time": "5/11/2019"
+}, {
+  "uid": 66,
+  "user_uid": 31,
+  "login_time": "3/22/2019"
+}, {
+  "uid": 67,
+  "user_uid": 32,
+  "login_time": "8/5/2019"
+}, {
+  "uid": 68,
+  "user_uid": 33,
+  "login_time": "3/8/2019"
+}, {
+  "uid": 69,
+  "user_uid": 34,
+  "login_time": "6/23/2019"
+}, {
+  "uid": 70,
+  "user_uid": 35,
+  "login_time": "6/29/2019"
+}, {
+  "uid": 71,
+  "user_uid": 1,
+  "login_time": "8/15/2019"
+}, {
+  "uid": 72,
+  "user_uid": 2,
+  "login_time": "11/14/2019"
+}, {
+  "uid": 73,
+  "user_uid": 3,
+  "login_time": "2/10/2019"
+}, {
+  "uid": 74,
+  "user_uid": 4,
+  "login_time": "9/15/2019"
+}, {
+  "uid": 75,
+  "user_uid": 5,
+  "login_time": "3/29/2019"
+}, {
+  "uid": 76,
+  "user_uid": 6,
+  "login_time": "9/8/2019"
+}, {
+  "uid": 77,
+  "user_uid": 7,
+  "login_time": "2/2/2019"
+}, {
+  "uid": 78,
+  "user_uid": 8,
+  "login_time": "1/20/2019"
+}, {
+  "uid": 79,
+  "user_uid": 9,
+  "login_time": "3/5/2019"
+}, {
+  "uid": 80,
+  "user_uid": 10,
+  "login_time": "8/27/2019"
+}, {
+  "uid": 81,
+  "user_uid": 11,
+  "login_time": "12/6/2019"
+}, {
+  "uid": 82,
+  "user_uid": 12,
+  "login_time": "3/25/2019"
+}, {
+  "uid": 83,
+  "user_uid": 13,
+  "login_time": "8/24/2019"
+}, {
+  "uid": 84,
+  "user_uid": 14,
+  "login_time": "9/11/2019"
+}, {
+  "uid": 85,
+  "user_uid": 15,
+  "login_time": "4/20/2019"
+}, {
+  "uid": 86,
+  "user_uid": 16,
+  "login_time": "6/24/2019"
+}, {
+  "uid": 87,
+  "user_uid": 17,
+  "login_time": "1/5/2019"
+}, {
+  "uid": 88,
+  "user_uid": 18,
+  "login_time": "12/17/2018"
+}, {
+  "uid": 89,
+  "user_uid": 19,
+  "login_time": "4/17/2019"
+}, {
+  "uid": 90,
+  "user_uid": 20,
+  "login_time": "9/21/2019"
+}, {
+  "uid": 91,
+  "user_uid": 21,
+  "login_time": "7/21/2019"
+}, {
+  "uid": 92,
+  "user_uid": 22,
+  "login_time": "6/23/2019"
+}, {
+  "uid": 93,
+  "user_uid": 23,
+  "login_time": "5/28/2019"
+}, {
+  "uid": 94,
+  "user_uid": 24,
+  "login_time": "9/4/2019"
+}, {
+  "uid": 95,
+  "user_uid": 25,
+  "login_time": "11/19/2019"
+}, {
+  "uid": 96,
+  "user_uid": 26,
+  "login_time": "8/3/2019"
+}, {
+  "uid": 97,
+  "user_uid": 27,
+  "login_time": "3/19/2019"
+}, {
+  "uid": 98,
+  "user_uid": 28,
+  "login_time": "2/17/2019"
+}, {
+  "uid": 99,
+  "user_uid": 29,
+  "login_time": "2/21/2019"
+}, {
+  "uid": 100,
+  "user_uid": 30,
+  "login_time": "8/14/2019"
+}]
+# }}}
