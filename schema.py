@@ -1,5 +1,5 @@
 from graphene import ObjectType, String, Boolean, ID, Field, Int, List
-from resource import review_json
+from resource import review_json, providers
 from json2obj import json2obj
 import json
 
@@ -31,13 +31,34 @@ class Review(ObjectType):
     role = String()
     user_flag = Boolean()
 
+class Providers(ObjectType):
+    uid = Int()
+    provider_name = String()
+    mds_fac_id = String()
+    npi = String()
+    street_address = String()
+    city = String()
+    state = String()
+    zip = String()
+
 class Query(ObjectType):
     reviews = List(Review)
+    providers = List(Providers)
+    hello = String(description="Hello")
 
     def resolve_reviews(context, info):
                 # reviews = api_call(args.get("id"))["reviews"]
                 # breakpoint()
-                reviews = review_json
+                reviews = review_json['reviews'][-1]
                 print(reviews)
                 # return json2obj(json.dumps(reviews))
-                return json2obj(reviews)
+                # return json2obj(reviews)
+                return json.dumps(reviews)
+
+    def resolve_providers(self, info, **args):
+        print(providers)
+        # return json.dumps(providers)
+        return providers
+
+    def resolve_hello(self, info, **args):
+        return "World"
