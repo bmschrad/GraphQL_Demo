@@ -24,9 +24,13 @@ class Users(ObjectType):
     first_name = String()
     last_name = String()
     email = String()
-    logs = List(Logs)
+    logs = List(Logs, latest=Boolean(required=False))
 
     def resolve_logs(self, info, **args):
+        if 'latest' in args and args['latest']:
+            # User is asking for just one facility
+            return list(filter(lambda x: x['user_uid'] == self['uid'], users_log))[-1]
+
         return list(filter(lambda x: x['user_uid'] == self['uid'], users_log))
 
 
@@ -51,6 +55,7 @@ class Providers(ObjectType):
 
 class Query(ObjectType):
     providers = List(Providers, uid=Int(required=False))
+    users = List(Users, uid=Int(required=False))
     hello = String(description="Hello")
 
     def resolve_providers(self, info, **args):
@@ -60,6 +65,14 @@ class Query(ObjectType):
 
         # Facility not specified return all
         return providers
+
+    def resolve_users(self, info, **args):
+        if 'uid' in args:
+            # User is asking for just one facility
+            return list(filter(lambda x: x['uid'] == args['uid'], provider_users))
+
+        # Facility not specified return all
+        return provider_users
 
     def resolve_hello(self, info, **args):
         return "World"
